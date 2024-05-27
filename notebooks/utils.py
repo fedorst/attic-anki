@@ -32,4 +32,4 @@ def sentence_to_string_repr(row: dict):
 --- Source:
 {row['metadata'].get('title', row['metadata'].get('work', 'unknown'))} by {row['metadata']['author']}
 --- Words:
-{LINEBR.join(word_to_simple_identifier(w) for w in row['sentence_obj'])}"""
+{LINEBR.join(word_to_simple_identifier(w) for w in row['sentence_obj'] if w['pos'] != 'punctuation')}"""
