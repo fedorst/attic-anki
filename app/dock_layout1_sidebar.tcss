@@ -1,0 +1,35 @@
+#sidebar {
+    dock: left;
+    width: 15;
+    height: 100%;
+    color: #0f2b41;
+    background: dodgerblue;
+}
+
+#app-grid {
+    margin-top: 4;
+    margin-bottom: 2;
+    margin-left: 4;
+    margin-right: 2;
+}
+
+#grc_sentence {
+}
+
+Input {
+    padding: 0 0 0 2;
+    margin: 0 0 0 0;
+    border: wide $accent 60%;
+    width: 50%;
+}
+
+Input:focus {
+    border: wide $accent
+}
+
+Label {
+    margin: 0 2 0 0;
+}
+Pretty {
+    margin: 1 2 0 0;
+}
