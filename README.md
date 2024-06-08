@@ -10,4 +10,4 @@
 If you want to reset your progress, delete `user_data.parquet`
 
 # reproducing the data generation
-See the README in `translations/`
+See the README in `notebooks/`
