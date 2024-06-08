@@ -31,22 +31,3 @@ I think I'll do this all in python to save on time.
 
 https://textual.textualize.io/widgets/input/#__tabbed_2_1
 maybe on https://textual.textualize.io/widgets/input/#textual.widgets._input.Input.Changed do beta code stuff
-
-
-# Current progress
-Textual app is set up - DONE
-Start with any row from the app_data - DONE
-Replace masked words with user input. Also change their style somehow - DONE
-
-Add beta_code tutorial - not yet
-Play around with the UI - somewhere
-refactor validation (upon submitting)
-Add row info
-
-THEN
-
-Add real app_data integration, including getting next row
-Improve UI
-
-Try to do this all by end of friday
-Then sat-sunday rush to write report

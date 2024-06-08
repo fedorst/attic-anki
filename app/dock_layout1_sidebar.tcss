@@ -1,9 +1,16 @@
-#sidebar {
-    dock: left;
+.sidebar {
     width: 15;
     height: 100%;
     color: #0f2b41;
-    background: dodgerblue;
+    background: black;
+}
+
+#sidebar_left {
+    dock: left;
+}
+
+#sidebar_right {
+    dock: right;
 }
 
 #app-grid {
@@ -14,13 +21,17 @@
 }
 
 #grc_sentence {
+    link-background: $primary-darken-3;
+    link-style: none;
+    padding: 1 2 1 2;
+    background: #141414;
 }
 
 Input {
     padding: 0 0 0 2;
     margin: 0 0 0 0;
     border: wide $accent 60%;
-    width: 50%;
+    width: 30%;
 }
 
 Input:focus {
