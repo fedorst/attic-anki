@@ -1,6 +1,9 @@
 # Running the textual app
-1. Navigate to `app`
-2. Run `textual run app.py`
+1. Create python venv
+2. Activate venv
+3. Install `requirements.txt` into it
+4. Navigate to `app`
+5. Run `textual run app.py`
 If you want to reset your progress, delete `user_data.parquet`
 
 # reproducing the data generation
