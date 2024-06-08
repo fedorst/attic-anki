@@ -48,10 +48,12 @@ def memory_score_to_string(memory_score: int):
             elements[i] = f"[red]{elements[i] }[/red]"
         else:
             elements[i] = f"[grey strike]{elements[i] }[/grey strike]"
+    if memory_score > 4:
+        elements[4] = f"[bold]\[{elements[i] }][/bold]"
     return "Word level: "+ " ".join(elements)
 
 def get_row(row_id: int):
-    row = df_words.iloc[row_id]
+    row = df_words.loc[row_id]
     sentence_grc = row.sentence_obj_masked
     sentence_ee = row.ee_phrase
     words_ee = row.ee_words
@@ -143,18 +145,20 @@ def sentence_grc_to_rich(sentence_grc: dict, current_input: str = ""):
 def escape_brackets(s: str):
     return re.sub("\[","\\\[",s)
 
-def decrement_memory_score(idx: int, current_score) -> None:
+def decrement_memory_score(idx: int) -> None:
+    curr_score = df_user_data.loc[idx]["memory_score"]
     min_threshold = 1
-    if current_score >= 2:
+    if curr_score >= 2:
         min_threshold = 2
-    df_user_data.loc[idx, "memory_score"] = max(current_score-2, min_threshold)
+    df_user_data.loc[idx, "memory_score"] = max(curr_score-2, min_threshold)
 
-def increment_memory_score(idx: int, current_score) -> None:
-    df_user_data.loc[idx, "memory_score"] = min(4, max(2, current_score+1))
+def increment_memory_score(idx: int) -> None:
+    curr_score = df_user_data.loc[idx]["memory_score"]
+    df_user_data.loc[idx, "memory_score"] = min(10, max(2, curr_score+1))
 
 def reorder_user_data():
-    df_user_data["order"] = df_user_data.index + 4**(df_user_data["memory_score"])
-    df_user_data["order"] += 5000*(df_user_data["memory_score"] == 4)
+    df_user_data["order"] = df_user_data.index + 2**(df_user_data["memory_score"]+1)
+    # df_user_data["order"] += 5000*(df_user_data["memory_score"] = 4)
     df_user_data.sort_values(by=["order"], ascending=[True], inplace=True)
 
 class SentenceScreen(Screen):
@@ -173,8 +177,9 @@ class SentenceScreen(Screen):
         self.highlighted_word = None
         curr_idx = self.selected_idx
         sentence_grc, sentence_ee, target_grc, target_ee, words_ee = get_row(curr_idx)
-        self.curr_memory_score = df_user_data.iloc[curr_idx]["memory_score"]
-        memory_score_str = memory_score_to_string(self.curr_memory_score)
+        curr_memory_score = df_user_data.loc[curr_idx]["memory_score"]
+        memory_score_str = memory_score_to_string(int(curr_memory_score))
+        self.memory_score_label = Label(memory_score_str)
         self.sentence_grc = sentence_grc
         self.sentence_ee = sentence_ee
         self.words_ee = words_ee
@@ -198,7 +203,7 @@ class SentenceScreen(Screen):
 
         with Container(id="app-grid"):
             with Center():
-                yield Label(memory_score_str)
+                yield self.memory_score_label
                 yield self.greek_sentence_label
                 yield self.ee_sentence_label
                 yield self.input
@@ -207,7 +212,7 @@ class SentenceScreen(Screen):
                 yield Label("", id="grc_words")
                 yield Label("", id="ee_words")
 
-        # yield get_user_data_table(5)
+        yield get_user_data_table(10)
 
         yield Footer(id="Footer")
         yield HorizontalScroll()
@@ -258,11 +263,11 @@ class SentenceScreen(Screen):
             # flash red for 2sec
             if not self.already_decremented_memory_score:
                 self.already_decremented_memory_score = True
-                decrement_memory_score(self.selected_idx, self.curr_memory_score)
+                decrement_memory_score(self.selected_idx)
             self.run_worker(self.repeat_curr_word())
         else:
             if not self.already_decremented_memory_score:
-                increment_memory_score(self.selected_idx, self.curr_memory_score)
+                increment_memory_score(self.selected_idx)
                 self.greek_sentence_label.styles.background = "darkgreen"
             else:
                 self.greek_sentence_label.styles.background = "#443209"
