@@ -1,19 +1,18 @@
 from textual.app import App, ComposeResult
-from textual.containers import HorizontalScroll, Container, Vertical, Center
+from textual.containers import HorizontalScroll, Container, Center, Vertical
 from textual.screen import Screen
-from textual.widgets import Placeholder, Input, Label, Pretty, Markdown, Header, Footer, Static, DataTable
+from textual.widgets import Input, Label, Header, Footer, Static, DataTable
 from textual.binding import Binding
-from textual.validation import Function, ValidationResult, Validator
+from textual.validation import ValidationResult, Validator
 from textual.reactive import reactive
 from textual import on
 import pandas as pd
 import beta_code
 import re
 import os
-import time
 import asyncio
 import difflib
-from textual.color import Color
+import sys
 
 USER_DATA_PATH = "user_data.parquet"
 APP_DATA_PATH = "app_data.parquet"
@@ -31,11 +30,15 @@ def get_user_data():
 
 df_user_data = get_user_data()
 
+def get_debug_df():
+    return df_user_data.merge(df_words[["target_grc", "ee_target"]], how="left", left_index=True, right_index=True).set_index(df_user_data.index)[["target_grc", "ee_target", "memory_score", "order"]].sort_values(by=["order"])
+
 def get_user_data_table(topk=5):
-    dt = DataTable()
-    col_keys = dt.add_columns(*df_user_data.reset_index().columns.to_list())
+    dt = DataTable(id="debug_table")
+    shown_df = get_debug_df()
+    col_keys = dt.add_columns(*shown_df.reset_index().columns.to_list())
     # cols = df_user_data.reset_index().columns.to_list()
-    row_keys = dt.add_rows(df_user_data.reset_index().head(5).to_numpy())
+    row_keys = dt.add_rows(shown_df.reset_index().head(topk).to_numpy())
     return dt
 
 def memory_score_to_string(memory_score: int):
@@ -126,18 +129,24 @@ def wrap_word_link(w: dict) -> str:
 def wrap_word_target(current_input: str) -> str:
     return f"[bold yellow]{current_input if current_input != '' else '***'}[/bold yellow]"
 
-def wrap_word(w: dict, current_input: str):
+def wrap_word_error(word: str) -> str:
+    return f"[bold red]{word}[/bold red]"
+
+def wrap_word(w: dict, current_input: str, error: bool=False):
     if w["pos"] == "punctuation":
         return w["string"]
     elif w["masked"]:
-        return wrap_word_target(current_input)
+        if not error:
+            return wrap_word_target(current_input)
+        else:
+            return wrap_word_error(w["string"])
     else:
         return wrap_word_link(w)
 
-def sentence_grc_to_rich(sentence_grc: dict, current_input: str = ""):
+def sentence_grc_to_rich(sentence_grc: dict, current_input: str = "", error: bool = False):
     output_str = ""
     for i, w in enumerate(sentence_grc):
-        output_str += wrap_word(w, current_input)
+        output_str += wrap_word(w, current_input, error)
         if i < len(sentence_grc)-1 and sentence_grc[i+1]["pos"] != "punctuation": 
             output_str += " "
     return output_str
@@ -170,6 +179,10 @@ class SentenceScreen(Screen):
         super().__init__()
         self.already_decremented_memory_score = False        
         self.selected_idx = get_next_word_idx()
+        if len(sys.argv) > 1 and sys.argv[1] == "debug":
+            self.debug_mode = True
+        else:
+            self.debug_mode = False
 
     def compose(self) -> ComposeResult:
         df_user_data.to_parquet(USER_DATA_PATH) # save progress
@@ -184,7 +197,7 @@ class SentenceScreen(Screen):
         self.sentence_ee = sentence_ee
         self.words_ee = words_ee
 
-        self.greek_sentence_label = Label(sentence_grc_to_rich(sentence_grc), id="grc_sentence")
+        self.greek_sentence_label = Label(sentence_grc_to_rich(self.sentence_grc), id="grc_sentence")
         self.ee_sentence_label = Label(escape_brackets(sentence_ee), id="ee_sentence")
         self.ee_target_label = Label(f'[yellow]{escape_brackets(target_ee)}[/yellow]', id="target_ee")
         self.input = Input(
@@ -195,33 +208,36 @@ class SentenceScreen(Screen):
                         BetaCodeCorrect(target_grc)
                     ]
                 )
-
+        debug_container = Container(id="debug-container")
+        debug_container.border_title="DEBUG INFO"
+        
         yield Static("Sidebar", id="sidebar_left", classes="sidebar")
         yield Static("Sidebar", id="sidebar_right", classes="sidebar")
 
         yield Header(id="Header", name="Attic-Anki")
 
         with Container(id="app-grid"):
-            with Center():
+            with Vertical():
                 yield self.memory_score_label
                 yield self.greek_sentence_label
                 yield self.ee_sentence_label
                 yield self.input
                 yield self.ee_target_label
-                yield Label("", id="error") # for debugging rn
-                yield Label("", id="grc_words")
-                yield Label("", id="ee_words")
+                yield Label(" ", id="error") # for debugging rn
+                yield Label(" ", id="grc_words")
+                yield Label(" ", id="ee_words")
 
-        yield get_user_data_table(10)
+                if self.debug_mode:
+                    with debug_container:
+                        yield get_user_data_table(10)
 
         yield Footer(id="Footer")
-        yield HorizontalScroll()
         self.set_focus(self.input)
 
     def action_select_word(self, word_id: str) -> None:
         if self.highlighted_word == int(word_id):
-            self.query_one("#grc_words").update("")
-            self.query_one("#ee_words").update("")
+            self.query_one("#grc_words").update(" ")
+            self.query_one("#ee_words").update(" ")
             self.highlighted_word = None
             return
         self.highlighted_word = int(word_id)
@@ -261,6 +277,7 @@ class SentenceScreen(Screen):
         if not event.validation_result.is_valid:
             self.query_one("#error").update(event.validation_result.failure_descriptions[0])
             # flash red for 2sec
+            self.greek_sentence_label.update(sentence_grc_to_rich(self.sentence_grc, error=True))
             if not self.already_decremented_memory_score:
                 self.already_decremented_memory_score = True
                 decrement_memory_score(self.selected_idx)

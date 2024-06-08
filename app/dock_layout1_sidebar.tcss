@@ -16,8 +16,20 @@
 #app-grid {
     margin-top: 4;
     margin-bottom: 2;
-    margin-left: 4;
+    margin-left: 8;
     margin-right: 2;
+}
+
+#debug-container {
+    border: heavy green;
+    border-title-color: green;
+    border-title-style: bold;
+}
+
+#debug-table-unused {
+    border: heavy green;
+    border-title-color: green;
+    border-title-style: bold;
 }
 
 #grc_sentence {
