@@ -1,3 +1,6 @@
+# Demomstration
+![](https://github.com/fedorst/attic-anki/blob/main/app_recording.gif)
+
 # Running the textual app
 1. Create python venv
 2. Activate venv
