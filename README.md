@@ -1,4 +1,4 @@
-# Demomstration
+# Demonstration
 ![](https://github.com/fedorst/attic-anki/blob/main/app_recording.gif)
 
 # Running the textual app
