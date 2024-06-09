@@ -9,5 +9,9 @@
 5. Run `textual run app.py` or `textual run app.py debug` to run it in debug mode.
 If you want to reset your progress, delete `user_data.parquet`
 
-# reproducing the data generation
+# Reproducing the data generation
 See the README in `notebooks/`
+
+### Attribution
+This repository holds the Greek files made available by the [Perseus Project](http://www.perseus.tufts.edu/hopper/opensource/download), in turn obtained from [here](https://github.com/cltk/grc_text_perseus).
+Perseus's corpora are distrubuted under the Creative Commons ShareAlike 3.0 License. See LICENSE.md for details.
