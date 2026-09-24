@@ -19,6 +19,8 @@ function h(tag, attrs = {}, ...children) {
 }
 
 async function api(path, body) {
+  // Static build (dist/sonad.html) has no server: the page embeds an in-browser backend.
+  if (window.sonadLocalApi) return window.sonadLocalApi(path, body);
   const res = await fetch(path, body === undefined ? {} : {
     method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body),
   });
@@ -476,7 +478,11 @@ async function settingsView() {
     row("Show grammatical form", "Show the case / tense the blank needs (e.g. partitive sg.). Turn off for a harder challenge — the first hint reveals it.", toggle("show_form")),
     row("Read sentences aloud", etVoice ? `Speak the sentence after each answer (voice: ${etVoice.name}).` : "No Estonian voice found on this device; install one in your OS speech settings to enable audio.", toggle("auto_speak")),
     row("Back up progress", "Download all reviews as JSON (also useful for fitting personal FSRS parameters).",
-      h("a", { class: "btn", href: "/api/export", download: "sonad-progress.json" }, "Export")),
+      h("button", { class: "btn", onclick: async () => {
+        const blob = new Blob([JSON.stringify(await api("/api/export"), null, 1)], { type: "application/json" });
+        const a = h("a", { href: URL.createObjectURL(blob), download: "sonad-progress.json" });
+        document.body.append(a); a.click(); a.remove();
+      } }, "Export")),
   ));
 }
 

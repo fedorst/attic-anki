@@ -28,6 +28,18 @@ Progress goes to `web/progress.db` (SQLite). Delete it to start over, or use
 Options: `--port 8000`, `--host 0.0.0.0` (to use it from your phone on the same
 network), `--db path/to.db`, `--deck decks/et-en`.
 
+### Without a server
+
+```bash
+python tools/build_static.py      # -> dist/sonad.html, one self-contained file
+```
+
+This inlines the deck, [ts-fsrs](https://github.com/open-spaced-repetition/ts-fsrs)
+(vendored in `static/vendor/`) and an in-browser copy of the API
+(`static/local-api.js`), and stores progress in the browser's localStorage. Open
+it from disk or put it on GitHub Pages. Keep `local-api.js` in sync with
+`store.py` when you change queue or grading rules.
+
 ## How a card works
 
 1. Type the missing word and press **Enter**. **Tab** is a hint: it reveals the
