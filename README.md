@@ -1,3 +1,13 @@
+# Sõnad (web app, new)
+A Lingvist-style Estonian trainer with FSRS spaced repetition. It lives in [`web/`](web/):
+see [`web/README.md`](web/README.md) to run it and [`web/SPEC.md`](web/SPEC.md) for the roadmap.
+
+```bash
+cd web && pip install -r requirements.txt && python server.py   # http://127.0.0.1:8000
+```
+
+The rest of this README is about the original Attic Greek terminal app.
+
 # Demonstration
 ![](https://github.com/fedorst/attic-anki/blob/main/app_recording.gif)
 

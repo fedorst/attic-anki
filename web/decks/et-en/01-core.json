@@ -1,0 +1,515 @@
+[
+  {
+    "id": "olema", "lemma": "olema", "pos": "verb", "en": "to be; to have (mul on)",
+    "forms": ["olema", "olla", "on", "oli"],
+    "note": "Estonian has no verb 'to have': 'I have' is 'mul on' (lit. 'on me is').",
+    "examples": [
+      {"et": "Ma {olen} täna kodus.", "en": "I [am] at home today.", "form": "pres 1sg"},
+      {"et": "Eile {oli} väga külm.", "en": "Yesterday it [was] very cold.", "form": "past 3sg"},
+      {"et": "Mul {on} kaks venda.", "en": "I [have] two brothers.", "form": "pres 3sg"},
+      {"et": "Ma tahan sinuga koos {olla}.", "en": "I want [to be] with you.", "form": "da-inf"}
+    ]
+  },
+  {
+    "id": "mina", "lemma": "mina", "pos": "pron", "en": "I, me",
+    "forms": ["mina", "minu", "mind", "meid"],
+    "note": "Short forms are more common in speech: ma, mu, mul, mulle.",
+    "examples": [
+      {"et": "{Ma} olen Anna.", "en": "[I] am Anna.", "form": "nom sg", "accept": ["mina"]},
+      {"et": "Kas sa aitad {mind}?", "en": "Will you help [me]?", "form": "part sg"},
+      {"et": "See on {minu} raamat.", "en": "This is [my] book.", "form": "gen sg", "accept": ["mu"]},
+      {"et": "Tule {minuga} kinno!", "en": "Come to the cinema [with me]!", "form": "kom sg"}
+    ]
+  },
+  {
+    "id": "sina", "lemma": "sina", "pos": "pron", "en": "you (singular, informal)",
+    "forms": ["sina", "sinu", "sind", "teid"],
+    "note": "Use 'teie' to address one person politely or several people.",
+    "examples": [
+      {"et": "Kas {sa} oled väsinud?", "en": "Are [you] tired?", "form": "nom sg", "accept": ["sina"]},
+      {"et": "Ma armastan {sind}.", "en": "I love [you].", "form": "part sg"},
+      {"et": "Kas see on {sinu} telefon?", "en": "Is this [your] phone?", "form": "gen sg", "accept": ["su"]},
+      {"et": "{Sul} on ilus kleit.", "en": "[You] have a beautiful dress.", "form": "ad sg", "accept": ["sinul"]}
+    ]
+  },
+  {
+    "id": "tema", "lemma": "tema", "pos": "pron", "en": "he, she; him, her",
+    "forms": ["tema", "tema", "teda", "neid"],
+    "note": "Estonian has no grammatical gender: 'ta' means both 'he' and 'she'.",
+    "examples": [
+      {"et": "{Ta} elab Tartus.", "en": "[He] lives in Tartu.", "form": "nom sg", "accept": ["tema"]},
+      {"et": "Ma ei tunne {teda}.", "en": "I don't know [her].", "form": "part sg"},
+      {"et": "See on {tema} auto.", "en": "This is [his] car.", "form": "gen sg", "accept": ["ta"]},
+      {"et": "Ma räägin {temaga} homme.", "en": "I'll talk [to him] tomorrow.", "form": "kom sg"}
+    ]
+  },
+  {
+    "id": "meie", "lemma": "meie", "pos": "pron", "en": "we, us",
+    "forms": ["meie", "meie", "meid", "meid"],
+    "examples": [
+      {"et": "{Me} läheme homme randa.", "en": "[We] are going to the beach tomorrow.", "form": "nom pl", "accept": ["meie"]},
+      {"et": "Kas sa tuled {meiega}?", "en": "Are you coming [with us]?", "form": "kom pl"},
+      {"et": "Ta ootab {meid} kohvikus.", "en": "She is waiting [for us] at the café.", "form": "part pl"},
+      {"et": "{Meie} maja on punane.", "en": "[Our] house is red.", "form": "gen pl", "accept": ["me"]}
+    ]
+  },
+  {
+    "id": "nemad", "lemma": "nemad", "pos": "pron", "en": "they, them",
+    "forms": ["nemad", "nende", "neid", "neid"],
+    "examples": [
+      {"et": "{Nad} elavad Tallinnas.", "en": "[They] live in Tallinn.", "form": "nom pl", "accept": ["nemad"]},
+      {"et": "Ma tean {nende} aadressi.", "en": "I know [their] address.", "form": "gen pl"},
+      {"et": "Kas sa nägid {neid}?", "en": "Did you see [them]?", "form": "part pl"},
+      {"et": "Mul pole {nendega} probleeme.", "en": "I have no problems [with them].", "form": "kom pl"}
+    ]
+  },
+  {
+    "id": "see", "lemma": "see", "pos": "pron", "en": "this, that, it",
+    "forms": ["see", "selle", "seda", "neid"],
+    "note": "The stem changes to 'selle-' in most cases: selle, selles, sellest, sellega.",
+    "examples": [
+      {"et": "{See} on minu vend.", "en": "[This] is my brother.", "form": "nom sg"},
+      {"et": "Ma ei tea {seda}.", "en": "I don't know [that].", "form": "part sg"},
+      {"et": "Me elame {selles} majas.", "en": "We live in [this] house.", "form": "in sg"},
+      {"et": "Mida sa {sellest} arvad?", "en": "What do you think [about it]?", "form": "el sg"}
+    ]
+  },
+  {
+    "id": "mis", "lemma": "mis", "pos": "pron", "en": "what, which",
+    "forms": ["mis", "mille", "mida", "mida"],
+    "note": "As an object 'what' is usually partitive: Mida sa teed? Mida sa sööd?",
+    "examples": [
+      {"et": "{Mis} kell on?", "en": "[What] time is it?", "form": "nom sg"},
+      {"et": "{Mida} sa sööd?", "en": "[What] are you eating?", "form": "part sg"},
+      {"et": "{Millest} te räägite?", "en": "[What] are you talking about?", "form": "el sg"},
+      {"et": "{Mille} jaoks see on?", "en": "[What] is this for?", "form": "gen sg"}
+    ]
+  },
+  {
+    "id": "kes", "lemma": "kes", "pos": "pron", "en": "who",
+    "forms": ["kes", "kelle", "keda", "keda"],
+    "examples": [
+      {"et": "{Kes} see on?", "en": "[Who] is that?", "form": "nom sg"},
+      {"et": "{Keda} sa ootad?", "en": "[Who] are you waiting for?", "form": "part sg"},
+      {"et": "{Kellega} sa räägid?", "en": "[Who] are you talking to?", "form": "kom sg"},
+      {"et": "{Kelle} kott see on?", "en": "[Whose] bag is this?", "form": "gen sg"}
+    ]
+  },
+  {
+    "id": "kus", "lemma": "kus", "pos": "adv", "en": "where",
+    "forms": [],
+    "note": "'Kus' is 'where (at)'; 'where to' is 'kuhu' and 'where from' is 'kust'.",
+    "examples": [
+      {"et": "{Kus} sa elad?", "en": "[Where] do you live?", "form": ""},
+      {"et": "{Kus} on lähim pood?", "en": "[Where] is the nearest shop?", "form": ""},
+      {"et": "Ma ei tea, {kus} ta on.", "en": "I don't know [where] he is.", "form": ""}
+    ]
+  },
+  {
+    "id": "ei", "lemma": "ei", "pos": "adv", "en": "not; no",
+    "forms": [],
+    "note": "After 'ei' the verb has the same bare form in every person: ma ei tea, sa ei tea, nad ei tea.",
+    "examples": [
+      {"et": "Ma {ei} tea.", "en": "I [don't] know.", "form": ""},
+      {"et": "Ta {ei} tulnud eile tööle.", "en": "She [didn't] come to work yesterday.", "form": ""},
+      {"et": "See {ei} ole minu kott.", "en": "This is [not] my bag.", "form": ""}
+    ]
+  },
+  {
+    "id": "ja", "lemma": "ja", "pos": "conj", "en": "and",
+    "forms": [],
+    "examples": [
+      {"et": "Ma ostsin leiba {ja} piima.", "en": "I bought bread [and] milk.", "form": ""},
+      {"et": "Ta istus maha {ja} hakkas sööma.", "en": "She sat down [and] started eating.", "form": ""},
+      {"et": "Mari {ja} Jaan on head sõbrad.", "en": "Mari [and] Jaan are good friends.", "form": ""}
+    ]
+  },
+  {
+    "id": "aga", "lemma": "aga", "pos": "conj", "en": "but",
+    "forms": [],
+    "examples": [
+      {"et": "Ma tahtsin tulla, {aga} mul polnud aega.", "en": "I wanted to come, [but] I didn't have time.", "form": ""},
+      {"et": "Maja on väike, {aga} ilus.", "en": "The house is small [but] beautiful.", "form": ""},
+      {"et": "{Aga} miks?", "en": "[But] why?", "form": ""}
+    ]
+  },
+  {
+    "id": "et", "lemma": "et", "pos": "conj", "en": "that; so that",
+    "forms": [],
+    "note": "There is always a comma before 'et', and unlike English 'that' it can't be left out.",
+    "examples": [
+      {"et": "Ma tean, {et} sa oled väsinud.", "en": "I know [that] you are tired.", "form": ""},
+      {"et": "Ta ütles, {et} tuleb hiljem.", "en": "He said [that] he would come later.", "form": ""},
+      {"et": "Räägi valjemini, {et} kõik kuuleksid.", "en": "Speak louder [so that] everyone can hear.", "form": ""}
+    ]
+  },
+  {
+    "id": "kui", "lemma": "kui", "pos": "conj", "en": "if, when; than; how",
+    "forms": [],
+    "note": "One word for 'if', 'when', 'than' and 'how (old, much…)'.",
+    "examples": [
+      {"et": "{Kui} sul on aega, helista mulle.", "en": "[If] you have time, call me.", "form": ""},
+      {"et": "Ta on pikem {kui} mina.", "en": "He is taller [than] me.", "form": ""},
+      {"et": "{Kui} vana sa oled?", "en": "[How] old are you?", "form": ""},
+      {"et": "{Kui} ma noor olin, elasin maal.", "en": "[When] I was young, I lived in the countryside.", "form": ""}
+    ]
+  },
+  {
+    "id": "ka", "lemma": "ka", "pos": "adv", "en": "also, too",
+    "forms": [],
+    "examples": [
+      {"et": "Ma tulen {ka}.", "en": "I'm coming [too].", "form": ""},
+      {"et": "Ta räägib {ka} vene keelt.", "en": "She [also] speaks Russian.", "form": ""},
+      {"et": "Tee on {ka} valmis.", "en": "The tea is ready [too].", "form": ""}
+    ]
+  },
+  {
+    "id": "veel", "lemma": "veel", "pos": "adv", "en": "still; yet; more; else",
+    "forms": [],
+    "examples": [
+      {"et": "Kas sa oled {veel} kodus?", "en": "Are you [still] at home?", "form": ""},
+      {"et": "Ma ei ole {veel} söönud.", "en": "I haven't eaten [yet].", "form": ""},
+      {"et": "Kas ma saaksin {veel} kohvi?", "en": "Could I have some [more] coffee?", "form": ""},
+      {"et": "Kes {veel} tuleb?", "en": "Who [else] is coming?", "form": ""}
+    ]
+  },
+  {
+    "id": "juba", "lemma": "juba", "pos": "adv", "en": "already",
+    "forms": [],
+    "examples": [
+      {"et": "Ma olen {juba} söönud.", "en": "I have [already] eaten.", "form": ""},
+      {"et": "Kell on {juba} kümme.", "en": "It's [already] ten o'clock.", "form": ""},
+      {"et": "Buss on {juba} läinud.", "en": "The bus has [already] gone.", "form": ""}
+    ]
+  },
+  {
+    "id": "nüüd", "lemma": "nüüd", "pos": "adv", "en": "now",
+    "forms": [],
+    "examples": [
+      {"et": "Ma pean {nüüd} minema.", "en": "I have to go [now].", "form": ""},
+      {"et": "{Nüüd} on sinu kord.", "en": "[Now] it's your turn.", "form": ""},
+      {"et": "Kus sa {nüüd} elad?", "en": "Where do you live [now]?", "form": ""}
+    ]
+  },
+  {
+    "id": "siin", "lemma": "siin", "pos": "adv", "en": "here",
+    "forms": [],
+    "note": "'Siin' is 'here' (location); 'to here' is 'siia', 'from here' is 'siit'.",
+    "examples": [
+      {"et": "Ma olen {siin}!", "en": "I'm [here]!", "form": ""},
+      {"et": "Kas {siin} tohib suitsetada?", "en": "Is smoking allowed [here]?", "form": ""},
+      {"et": "{Siin} on sinu võtmed.", "en": "[Here] are your keys.", "form": ""}
+    ]
+  },
+  {
+    "id": "seal", "lemma": "seal", "pos": "adv", "en": "there",
+    "forms": [],
+    "note": "'Seal' is 'there' (location); 'to there' is 'sinna', 'from there' is 'sealt'.",
+    "examples": [
+      {"et": "Kes {seal} on?", "en": "Who's [there]?", "form": ""},
+      {"et": "Ma elasin {seal} kaks aastat.", "en": "I lived [there] for two years.", "form": ""},
+      {"et": "Vaata, {seal} ta on!", "en": "Look, [there] he is!", "form": ""}
+    ]
+  },
+  {
+    "id": "jah", "lemma": "jah", "pos": "intj", "en": "yes",
+    "forms": [],
+    "examples": [
+      {"et": "{Jah}, ma tulen.", "en": "[Yes], I'm coming.", "form": ""},
+      {"et": "{Jah}, see on õige.", "en": "[Yes], that's right.", "form": ""},
+      {"et": "Ta ütles {jah}.", "en": "She said [yes].", "form": ""}
+    ]
+  },
+  {
+    "id": "aitäh", "lemma": "aitäh", "pos": "intj", "en": "thank you, thanks",
+    "forms": [],
+    "examples": [
+      {"et": "{Aitäh}, see oli väga maitsev!", "en": "[Thank you], that was delicious!", "form": ""},
+      {"et": "Suur {aitäh} abi eest!", "en": "[Thanks] a lot for the help!", "form": ""},
+      {"et": "Ei, {aitäh}.", "en": "No, [thank you].", "form": ""}
+    ]
+  },
+  {
+    "id": "tahtma", "lemma": "tahtma", "pos": "verb", "en": "to want",
+    "forms": ["tahtma", "tahta", "tahab", "tahtis"],
+    "note": "Takes the da-infinitive: tahan minna, tahan süüa.",
+    "examples": [
+      {"et": "Ma {tahan} kohvi.", "en": "I [want] coffee.", "form": "pres 1sg"},
+      {"et": "Mida sa {tahad} süüa?", "en": "What do you [want] to eat?", "form": "pres 2sg"},
+      {"et": "Ta {tahtis} sulle helistada.", "en": "He [wanted] to call you.", "form": "past 3sg"},
+      {"et": "Ma ei {taha} täna välja minna.", "en": "I don't [want] to go out today.", "form": "neg"}
+    ]
+  },
+  {
+    "id": "saama", "lemma": "saama", "pos": "verb", "en": "to get; can, be able to; to become",
+    "forms": ["saama", "saada", "saab", "sai"],
+    "note": "Three main senses: 'get' (sain kirja), 'can' + da-infinitive (saan tulla), 'become' (arstiks saama, temast saab…).",
+    "examples": [
+      {"et": "Ma {sain} sinu kirja.", "en": "I [got] your letter.", "form": "past 1sg"},
+      {"et": "Kas sa {saad} homme tulla?", "en": "[Can] you come tomorrow?", "form": "pres 2sg"},
+      {"et": "Temast {saab} hea õpetaja.", "en": "She [will become] a good teacher.", "form": "pres 3sg"},
+      {"et": "Ma tahan arstiks {saada}.", "en": "I want [to become] a doctor.", "form": "da-inf"}
+    ]
+  },
+  {
+    "id": "tegema", "lemma": "tegema", "pos": "verb", "en": "to do, to make",
+    "forms": ["tegema", "teha", "teeb", "tegi"],
+    "note": "Irregular: teen, teeb, tegi, teha, tehtud.",
+    "examples": [
+      {"et": "Mida sa {teed}?", "en": "What are you [doing]?", "form": "pres 2sg"},
+      {"et": "Ema {tegi} pannkooke.", "en": "Mum [made] pancakes.", "form": "past 3sg"},
+      {"et": "Mul on palju tööd {teha}.", "en": "I have a lot of work [to do].", "form": "da-inf"},
+      {"et": "Ma pean kodutööd {tegema}.", "en": "I have to [do] my homework.", "form": "ma-inf"}
+    ]
+  },
+  {
+    "id": "minema", "lemma": "minema", "pos": "verb", "en": "to go",
+    "forms": ["minema", "minna", "läheb", "läks"],
+    "note": "Irregular: present 'lähen, läheb', past 'läksin, läks', but infinitives 'minna, minema'.",
+    "examples": [
+      {"et": "Ma {lähen} homme Tartusse.", "en": "I'm [going] to Tartu tomorrow.", "form": "pres 1sg"},
+      {"et": "Nad {läksid} eile kinno.", "en": "They [went] to the cinema yesterday.", "form": "past 3pl"},
+      {"et": "Ma tahan koju {minna}.", "en": "I want [to go] home.", "form": "da-inf"},
+      {"et": "Ma pean kohe tööle {minema}.", "en": "I have to [go] to work right away.", "form": "ma-inf"}
+    ]
+  },
+  {
+    "id": "tulema", "lemma": "tulema", "pos": "verb", "en": "to come",
+    "forms": ["tulema", "tulla", "tuleb", "tuli"],
+    "examples": [
+      {"et": "Millal sa koju {tuled}?", "en": "When are you [coming] home?", "form": "pres 2sg"},
+      {"et": "Ta {tuli} eile hilja koju.", "en": "He [came] home late yesterday.", "form": "past 3sg"},
+      {"et": "Kas sa tahad meiega kaasa {tulla}?", "en": "Do you want [to come] along with us?", "form": "da-inf"},
+      {"et": "Buss {tuleb} kohe.", "en": "The bus [is coming] soon.", "form": "pres 3sg"}
+    ]
+  },
+  {
+    "id": "ütlema", "lemma": "ütlema", "pos": "verb", "en": "to say, to tell",
+    "forms": ["ütlema", "öelda", "ütleb", "ütles"],
+    "note": "The da-infinitive is irregular: öelda (and 'öeldakse' = 'it is said').",
+    "examples": [
+      {"et": "Mida ta {ütles}?", "en": "What did he [say]?", "form": "past 3sg"},
+      {"et": "Ma ei oska seda eesti keeles {öelda}.", "en": "I can't [say] it in Estonian.", "form": "da-inf"},
+      {"et": "{Ütle} mulle, kui sa valmis oled.", "en": "[Tell] me when you're ready.", "form": "imper 2sg"},
+      {"et": "Arst {ütleb}, et see pole ohtlik.", "en": "The doctor [says] it's not dangerous.", "form": "pres 3sg"}
+    ]
+  },
+  {
+    "id": "teadma", "lemma": "teadma", "pos": "verb", "en": "to know (a fact)",
+    "forms": ["teadma", "teada", "teab", "teadis"],
+    "note": "'Teadma' is knowing facts; knowing a person is 'tundma' (Ma tunnen teda).",
+    "examples": [
+      {"et": "Ma ei {tea}, kus ta elab.", "en": "I don't [know] where he lives.", "form": "neg"},
+      {"et": "Kas sa {tead}, mis kell on?", "en": "Do you [know] what time it is?", "form": "pres 2sg"},
+      {"et": "Keegi ei {teadnud}, kus ta on.", "en": "Nobody [knew] where she was.", "form": "past neg"},
+      {"et": "Ma tahan {teada}, mis juhtus.", "en": "I want [to know] what happened.", "form": "da-inf"}
+    ]
+  },
+  {
+    "id": "nägema", "lemma": "nägema", "pos": "verb", "en": "to see",
+    "forms": ["nägema", "näha", "näeb", "nägi"],
+    "note": "'Nägemist!' (lit. 'of seeing') means 'Goodbye!'.",
+    "examples": [
+      {"et": "Ma {näen} sind!", "en": "I [see] you!", "form": "pres 1sg"},
+      {"et": "Ma {nägin} eile Marit poes.", "en": "I [saw] Mari at the shop yesterday.", "form": "past 1sg"},
+      {"et": "Mul on hea meel sind {näha}!", "en": "I'm glad [to see] you!", "form": "da-inf"}
+    ]
+  },
+  {
+    "id": "andma", "lemma": "andma", "pos": "verb", "en": "to give",
+    "forms": ["andma", "anda", "annab", "andis"],
+    "note": "The stem changes in the present: annan, annab (nd → nn).",
+    "examples": [
+      {"et": "{Anna} mulle vett, palun.", "en": "[Give] me some water, please.", "form": "imper 2sg"},
+      {"et": "Ta {andis} mulle oma numbri.", "en": "She [gave] me her number.", "form": "past 3sg"},
+      {"et": "Ma {annan} sulle homme raha tagasi.", "en": "I'll [give] you the money back tomorrow.", "form": "pres 1sg"}
+    ]
+  },
+  {
+    "id": "võtma", "lemma": "võtma", "pos": "verb", "en": "to take",
+    "forms": ["võtma", "võtta", "võtab", "võttis"],
+    "examples": [
+      {"et": "Ma {võtan} ühe kohvi.", "en": "I'll [take] a coffee.", "form": "pres 1sg"},
+      {"et": "Kes {võttis} mu telefoni?", "en": "Who [took] my phone?", "form": "past 3sg"},
+      {"et": "Ära unusta vihmavarju kaasa {võtta}!", "en": "Don't forget [to take] an umbrella!", "form": "da-inf"},
+      {"et": "{Võta} istet!", "en": "[Take] a seat!", "form": "imper 2sg"}
+    ]
+  },
+  {
+    "id": "pidama", "lemma": "pidama", "pos": "verb", "en": "must, to have to; to keep (a promise)",
+    "forms": ["pidama", "pidada", "peab", "pidi"],
+    "note": "In the 'must' sense it takes the ma-infinitive: pean minema.",
+    "examples": [
+      {"et": "Ma {pean} homme vara tõusma.", "en": "I [have to] get up early tomorrow.", "form": "pres 1sg"},
+      {"et": "Me {pidime} tund aega ootama.", "en": "We [had to] wait for an hour.", "form": "past 1pl"},
+      {"et": "Sa ei {pea} seda tegema.", "en": "You don't [have to] do that.", "form": "neg"},
+      {"et": "Ta {peab} alati oma sõna.", "en": "He always [keeps] his word.", "form": "pres 3sg"}
+    ]
+  },
+  {
+    "id": "hea", "lemma": "hea", "pos": "adj", "en": "good",
+    "forms": ["hea", "hea", "head", "häid"],
+    "note": "Irregular comparison: hea – parem – parim. The adverb 'well' is 'hästi'.",
+    "examples": [
+      {"et": "See on väga {hea} raamat.", "en": "This is a very [good] book.", "form": "nom sg"},
+      {"et": "Ma otsin {head} restorani.", "en": "I'm looking for a [good] restaurant.", "form": "part sg"},
+      {"et": "Tal on palju {häid} sõpru.", "en": "She has many [good] friends.", "form": "part pl"},
+      {"et": "See on {parem} kui eelmine.", "en": "This one is [better] than the last one.", "form": "comp nom sg"}
+    ]
+  },
+  {
+    "id": "suur", "lemma": "suur", "pos": "adj", "en": "big, large",
+    "forms": ["suur", "suure", "suurt", "suuri"],
+    "examples": [
+      {"et": "Neil on {suur} maja.", "en": "They have a [big] house.", "form": "nom sg"},
+      {"et": "Me elame {suures} linnas.", "en": "We live in a [big] city.", "form": "in sg"},
+      {"et": "Ma ei taha {suurt} autot.", "en": "I don't want a [big] car.", "form": "part sg"},
+      {"et": "Tallinn on {suurem} kui Tartu.", "en": "Tallinn is [bigger] than Tartu.", "form": "comp nom sg"}
+    ]
+  },
+  {
+    "id": "väike", "lemma": "väike", "pos": "adj", "en": "small, little",
+    "forms": ["väike", "väikese", "väikest", "väikesi"],
+    "examples": [
+      {"et": "Meil on {väike} korter.", "en": "We have a [small] flat.", "form": "nom sg"},
+      {"et": "Ta elab {väikeses} külas.", "en": "She lives in a [small] village.", "form": "in sg"},
+      {"et": "Mul on kaks {väikest} last.", "en": "I have two [small] children.", "form": "part sg"},
+      {"et": "Pargis mängisid {väikesed} lapsed.", "en": "[Little] children were playing in the park.", "form": "nom pl"}
+    ]
+  },
+  {
+    "id": "uus", "lemma": "uus", "pos": "adj", "en": "new",
+    "forms": ["uus", "uue", "uut", "uusi"],
+    "examples": [
+      {"et": "Mul on {uus} telefon.", "en": "I have a [new] phone.", "form": "nom sg"},
+      {"et": "Ta ostis {uue} auto.", "en": "He bought a [new] car.", "form": "gen sg"},
+      {"et": "Mis on {uut}?", "en": "What's [new]?", "form": "part sg"},
+      {"et": "Mul on vaja {uusi} kingi.", "en": "I need [new] shoes.", "form": "part pl"}
+    ]
+  },
+  {
+    "id": "palju", "lemma": "palju", "pos": "adv", "en": "much, many, a lot",
+    "forms": [],
+    "note": "Followed by the partitive: palju tööd, palju inimesi. 'Palju õnne!' = 'Congratulations! / Happy birthday!'",
+    "examples": [
+      {"et": "Linnas on {palju} inimesi.", "en": "There are [a lot of] people in the city.", "form": ""},
+      {"et": "Kui {palju} see maksab?", "en": "How [much] does it cost?", "form": ""},
+      {"et": "Ta räägib liiga {palju}.", "en": "He talks too [much].", "form": ""}
+    ]
+  },
+  {
+    "id": "aeg", "lemma": "aeg", "pos": "noun", "en": "time",
+    "forms": ["aeg", "aja", "aega", "aegu"],
+    "note": "The stem changes a lot: aeg, aja, aega, ajal.",
+    "examples": [
+      {"et": "Mul pole {aega}.", "en": "I don't have [time].", "form": "part sg"},
+      {"et": "Mis {ajal} sa tuled?", "en": "At what [time] are you coming?", "form": "ad sg"},
+      {"et": "{Aeg} läheb kiiresti.", "en": "[Time] flies.", "form": "nom sg"},
+      {"et": "Helista mulle mõne {aja} pärast.", "en": "Call me in a little [while].", "form": "gen sg"}
+    ]
+  },
+  {
+    "id": "päev", "lemma": "päev", "pos": "noun", "en": "day",
+    "forms": ["päev", "päeva", "päeva", "päevi"],
+    "examples": [
+      {"et": "Mis {päev} täna on?", "en": "What [day] is it today?", "form": "nom sg"},
+      {"et": "Ma töötan viis {päeva} nädalas.", "en": "I work five [days] a week.", "form": "part sg"},
+      {"et": "Ma töötasin terve {päeva}.", "en": "I worked all [day].", "form": "gen sg"},
+      {"et": "Viimastel {päevadel} on olnud väga palav.", "en": "It has been very hot in the last few [days].", "form": "ad pl"}
+    ]
+  },
+  {
+    "id": "inimene", "lemma": "inimene", "pos": "noun", "en": "person, human; (pl.) people",
+    "forms": ["inimene", "inimese", "inimest", "inimesi"],
+    "examples": [
+      {"et": "Ta on väga tore {inimene}.", "en": "She is a very nice [person].", "form": "nom sg"},
+      {"et": "Peol oli palju {inimesi}.", "en": "There were a lot of [people] at the party.", "form": "part pl"},
+      {"et": "Meie peres on neli {inimest}.", "en": "There are four [people] in our family.", "form": "part sg"},
+      {"et": "{Inimesed} on siin väga sõbralikud.", "en": "[People] here are very friendly.", "form": "nom pl"}
+    ]
+  },
+  {
+    "id": "kodu", "lemma": "kodu", "pos": "noun", "en": "home",
+    "forms": ["kodu", "kodu", "kodu", "kodusid"],
+    "note": "Irregular illative 'koju' (to home); 'kodus' = at home, 'kodust' = from home.",
+    "examples": [
+      {"et": "Minu {kodu} on Tallinnas.", "en": "My [home] is in Tallinn.", "form": "nom sg"},
+      {"et": "Ta pole veel {koju} jõudnud.", "en": "He hasn't got [home] yet.", "form": "ill sg"},
+      {"et": "Ma olen terve päeva {kodus}.", "en": "I'm [at home] all day.", "form": "in sg"},
+      {"et": "Ma lähen kell kaheksa {kodust} välja.", "en": "I leave [home] at eight.", "form": "el sg"}
+    ]
+  },
+  {
+    "id": "maja", "lemma": "maja", "pos": "noun", "en": "house, building",
+    "forms": ["maja", "maja", "maja", "maju"],
+    "examples": [
+      {"et": "Nad ostsid uue {maja}.", "en": "They bought a new [house].", "form": "gen sg"},
+      {"et": "Me elame suures {majas}.", "en": "We live in a big [house].", "form": "in sg"},
+      {"et": "Sellel tänaval on palju vanu {maju}.", "en": "There are many old [houses] on this street.", "form": "part pl"},
+      {"et": "Kass jooksis {majja}.", "en": "The cat ran [into the house].", "form": "short ill sg", "accept": ["majasse"]}
+    ]
+  },
+  {
+    "id": "töö", "lemma": "töö", "pos": "noun", "en": "work, job",
+    "forms": ["töö", "töö", "tööd", "töid"],
+    "examples": [
+      {"et": "Mul on uus {töö}.", "en": "I have a new [job].", "form": "nom sg"},
+      {"et": "Ma lähen hommikul {tööle}.", "en": "I go [to work] in the morning.", "form": "all sg"},
+      {"et": "Ta on praegu {tööl}.", "en": "She's [at work] right now.", "form": "ad sg"},
+      {"et": "Mul on täna palju {tööd}.", "en": "I have a lot of [work] today.", "form": "part sg"}
+    ]
+  },
+  {
+    "id": "aasta", "lemma": "aasta", "pos": "noun", "en": "year",
+    "forms": ["aasta", "aasta", "aastat", "aastaid"],
+    "examples": [
+      {"et": "Ta on kakskümmend {aastat} vana.", "en": "She is twenty [years] old.", "form": "part sg"},
+      {"et": "Möödunud {aastal} käisime Itaalias.", "en": "Last [year] we went to Italy.", "form": "ad sg"},
+      {"et": "Me pole teineteist {aastaid} näinud.", "en": "We haven't seen each other for [years].", "form": "part pl"},
+      {"et": "See {aasta} on olnud raske.", "en": "This [year] has been hard.", "form": "nom sg"}
+    ]
+  },
+  {
+    "id": "asi", "lemma": "asi", "pos": "noun", "en": "thing, matter",
+    "forms": ["asi", "asja", "asja", "asju"],
+    "examples": [
+      {"et": "See on väga tähtis {asi}.", "en": "It's a very important [thing].", "form": "nom sg"},
+      {"et": "Pane oma {asjad} kappi.", "en": "Put your [things] in the cupboard.", "form": "nom pl"},
+      {"et": "Mul on palju {asju} teha.", "en": "I have lots of [things] to do.", "form": "part pl"},
+      {"et": "Ma unustasin ühe {asja}.", "en": "I forgot one [thing].", "form": "gen sg"}
+    ]
+  },
+  {
+    "id": "mees", "lemma": "mees", "pos": "noun", "en": "man; husband",
+    "forms": ["mees", "mehe", "meest", "mehi"],
+    "note": "Also means 'husband' (minu mees = my husband).",
+    "examples": [
+      {"et": "See {mees} on minu naaber.", "en": "That [man] is my neighbour.", "form": "nom sg"},
+      {"et": "Ma tunnen tema {meest}.", "en": "I know her [husband].", "form": "part sg"},
+      {"et": "Tema {mehe} nimi on Jaan.", "en": "Her [husband's] name is Jaan.", "form": "gen sg"},
+      {"et": "Saunas olid ainult {mehed}.", "en": "Only [men] were in the sauna.", "form": "nom pl"}
+    ]
+  },
+  {
+    "id": "naine", "lemma": "naine", "pos": "noun", "en": "woman; wife",
+    "forms": ["naine", "naise", "naist", "naisi"],
+    "note": "Also means 'wife' (minu naine = my wife).",
+    "examples": [
+      {"et": "Kes see {naine} on?", "en": "Who is that [woman]?", "form": "nom sg"},
+      {"et": "Ta tuli peole oma {naisega}.", "en": "He came to the party with his [wife].", "form": "kom sg"},
+      {"et": "Ma ei tunne seda {naist}.", "en": "I don't know that [woman].", "form": "part sg"},
+      {"et": "{Naised} elavad kauem kui mehed.", "en": "[Women] live longer than men.", "form": "nom pl"}
+    ]
+  },
+  {
+    "id": "laps", "lemma": "laps", "pos": "noun", "en": "child",
+    "forms": ["laps", "lapse", "last", "lapsi"],
+    "note": "Irregular partitive: last (kolm last = three children).",
+    "examples": [
+      {"et": "Neil on kolm {last}.", "en": "They have three [children].", "form": "part sg"},
+      {"et": "{Laps} magab juba.", "en": "The [child] is already asleep.", "form": "nom sg"},
+      {"et": "{Lapsed} mängivad õues.", "en": "The [children] are playing outside.", "form": "nom pl"},
+      {"et": "Ma viin {lapse} kooli.", "en": "I'm taking the [child] to school.", "form": "gen sg"}
+    ]
+  }
+]

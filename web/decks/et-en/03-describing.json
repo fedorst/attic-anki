@@ -1,0 +1,483 @@
+[
+  {
+    "id": "ilus", "lemma": "ilus", "pos": "adj", "en": "beautiful, pretty, nice",
+    "forms": ["ilus", "ilusa", "ilusat", "ilusaid"],
+    "examples": [
+      {"et": "Tallinn on väga {ilus} linn.", "en": "Tallinn is a very [beautiful] city.", "form": "nom sg"},
+      {"et": "Kohtume ühes {ilusas} kohvikus.", "en": "Let's meet in a [nice] café.", "form": "in sg"},
+      {"et": "Täna on {ilusam} ilm kui eile.", "en": "The weather is [nicer] today than yesterday.", "form": "comp nom sg"},
+      {"et": "Aias on palju {ilusaid} lilli.", "en": "There are many [beautiful] flowers in the garden.", "form": "part pl"}
+    ]
+  },
+  {
+    "id": "halb", "lemma": "halb", "pos": "adj", "en": "bad",
+    "forms": ["halb", "halva", "halba", "halbu"],
+    "note": "Comparative is halvem ('worse'); the adverb 'badly' is halvasti.",
+    "examples": [
+      {"et": "Mul on täna {halb} tuju.", "en": "I'm in a [bad] mood today.", "form": "nom sg"},
+      {"et": "Ilm on täna {halvem} kui eile.", "en": "The weather is [worse] today than yesterday.", "form": "comp nom sg"},
+      {"et": "Tal on mõned {halvad} harjumused.", "en": "He has some [bad] habits.", "form": "nom pl"}
+    ]
+  },
+  {
+    "id": "vana", "lemma": "vana", "pos": "adj", "en": "old",
+    "forms": ["vana", "vana", "vana", "vanu"],
+    "examples": [
+      {"et": "Minu vanaisa on juba väga {vana}.", "en": "My grandfather is already very [old].", "form": "nom sg"},
+      {"et": "Ta elab ühes {vanas} puumajas.", "en": "She lives in an [old] wooden house.", "form": "in sg"},
+      {"et": "Mu vend on minust kaks aastat {vanem}.", "en": "My brother is two years [older] than me.", "form": "comp nom sg"},
+      {"et": "Ma ostsin turult {vanu} raamatuid.", "en": "I bought [old] books at the market.", "form": "part pl"}
+    ]
+  },
+  {
+    "id": "noor", "lemma": "noor", "pos": "adj", "en": "young",
+    "forms": ["noor", "noore", "noort", "noori"],
+    "examples": [
+      {"et": "Ta on selle töö jaoks liiga {noor}.", "en": "He is too [young] for this job.", "form": "nom sg"},
+      {"et": "Mu õde on minust {noorem}.", "en": "My sister is [younger] than me.", "form": "comp nom sg"},
+      {"et": "Selles linnas elab palju {noori}.", "en": "Many [young people] live in this town.", "form": "part pl"}
+    ]
+  },
+  {
+    "id": "kallis", "lemma": "kallis", "pos": "adj", "en": "expensive; dear",
+    "forms": ["kallis", "kalli", "kallist", "kalleid"],
+    "note": "Also 'dear': 'Kallis Mari!' opens a letter, and 'kallis' alone means 'darling'.",
+    "examples": [
+      {"et": "See restoran on väga {kallis}.", "en": "This restaurant is very [expensive].", "form": "nom sg"},
+      {"et": "Ta ostis endale {kalli} auto.", "en": "She bought herself an [expensive] car.", "form": "gen sg"},
+      {"et": "Takso on bussist palju {kallim}.", "en": "A taxi is much [more expensive] than the bus.", "form": "comp nom sg"},
+      {"et": "Ma ei osta {kalleid} riideid.", "en": "I don't buy [expensive] clothes.", "form": "part pl"}
+    ]
+  },
+  {
+    "id": "odav", "lemma": "odav", "pos": "adj", "en": "cheap",
+    "forms": ["odav", "odava", "odavat", "odavaid"],
+    "examples": [
+      {"et": "Toit on siin üsna {odav}.", "en": "The food here is quite [cheap].", "form": "nom sg"},
+      {"et": "Me leidsime kesklinnas {odava} hotelli.", "en": "We found a [cheap] hotel in the city centre.", "form": "gen sg"},
+      {"et": "Buss on rongist {odavam}.", "en": "The bus is [cheaper] than the train.", "form": "comp nom sg"}
+    ]
+  },
+  {
+    "id": "kiire", "lemma": "kiire", "pos": "adj", "en": "fast, quick; busy (mul on kiire)",
+    "forms": ["kiire", "kiire", "kiiret", "kiireid"],
+    "note": "'Mul on kiire' means 'I'm in a hurry / I'm busy'; the adverb 'quickly' is kiiresti.",
+    "examples": [
+      {"et": "Mul on täna väga {kiire}.", "en": "I'm very [busy] today.", "form": "nom sg"},
+      {"et": "Ma saatsin talle {kiire} sõnumi.", "en": "I sent him a [quick] message.", "form": "gen sg"},
+      {"et": "Rong on bussist {kiirem}.", "en": "The train is [faster] than the bus.", "form": "comp nom sg"}
+    ]
+  },
+  {
+    "id": "soe", "lemma": "soe", "pos": "adj", "en": "warm",
+    "forms": ["soe", "sooja", "sooja", "sooje"],
+    "note": "The stem changes: soe → sooja, soojem.",
+    "examples": [
+      {"et": "Täna on väljas väga {soe}.", "en": "It's very [warm] outside today.", "form": "nom sg"},
+      {"et": "Joo natuke {sooja} teed!", "en": "Drink some [warm] tea!", "form": "part sg"},
+      {"et": "Homme on veel {soojem}.", "en": "Tomorrow will be even [warmer].", "form": "comp nom sg"},
+      {"et": "Talvel on vaja {sooje} riideid.", "en": "In winter you need [warm] clothes.", "form": "part pl"}
+    ]
+  },
+  {
+    "id": "külm", "lemma": "külm", "pos": "adj", "en": "cold",
+    "forms": ["külm", "külma", "külma", "külmi"],
+    "examples": [
+      {"et": "Vesi on liiga {külm}.", "en": "The water is too [cold].", "form": "nom sg"},
+      {"et": "Ma ei joo {külma} vett.", "en": "I don't drink [cold] water.", "form": "part sg"},
+      {"et": "Täna on {külmem} kui eile.", "en": "Today it's [colder] than yesterday.", "form": "comp nom sg"}
+    ]
+  },
+  {
+    "id": "pikk", "lemma": "pikk", "pos": "adj", "en": "long; tall",
+    "forms": ["pikk", "pika", "pikka", "pikki"],
+    "note": "For people pikk means 'tall'.",
+    "examples": [
+      {"et": "Mu vend on väga {pikk}.", "en": "My brother is very [tall].", "form": "nom sg"},
+      {"et": "Ta kirjutas mulle {pika} kirja.", "en": "She wrote me a [long] letter.", "form": "gen sg"},
+      {"et": "Tal on {pikad} juuksed.", "en": "She has [long] hair.", "form": "nom pl"},
+      {"et": "Sa oled minust {pikem}.", "en": "You are [taller] than me.", "form": "comp nom sg"}
+    ]
+  },
+  {
+    "id": "lühike", "lemma": "lühike", "pos": "adj", "en": "short",
+    "forms": ["lühike", "lühikese", "lühikest", "lühikesi"],
+    "note": "The comparative is irregular: lühem ('shorter').",
+    "examples": [
+      {"et": "Film oli üsna {lühike}.", "en": "The film was quite [short].", "form": "nom sg"},
+      {"et": "Teeme {lühikese} pausi.", "en": "Let's take a [short] break.", "form": "gen sg"},
+      {"et": "Talvel on päevad {lühemad}.", "en": "In winter the days are [shorter].", "form": "comp nom pl"}
+    ]
+  },
+  {
+    "id": "raske", "lemma": "raske", "pos": "adj", "en": "heavy; difficult, hard",
+    "forms": ["raske", "raske", "rasket", "raskeid"],
+    "examples": [
+      {"et": "Eesti keel ei ole nii {raske}.", "en": "Estonian isn't that [difficult].", "form": "nom sg"},
+      {"et": "See kast on {raskem}, kui ma arvasin.", "en": "This box is [heavier] than I thought.", "form": "comp nom sg"},
+      {"et": "Ta ei karda {raskeid} ülesandeid.", "en": "She isn't afraid of [difficult] tasks.", "form": "part pl"}
+    ]
+  },
+  {
+    "id": "kerge", "lemma": "kerge", "pos": "adj", "en": "light (not heavy); easy",
+    "forms": ["kerge", "kerge", "kerget", "kergeid"],
+    "examples": [
+      {"et": "Täna puhub {kerge} tuul.", "en": "A [light] wind is blowing today.", "form": "nom sg"},
+      {"et": "Mu kott on nüüd palju {kergem}.", "en": "My bag is much [lighter] now.", "form": "comp nom sg"},
+      {"et": "Suvel kannan {kergeid} riideid.", "en": "In summer I wear [light] clothes.", "form": "part pl"}
+    ]
+  },
+  {
+    "id": "õige", "lemma": "õige", "pos": "adj", "en": "right, correct",
+    "forms": ["õige", "õige", "õiget", "õigeid"],
+    "note": "'You're right' is 'Sul on õigus', not 'Sa oled õige'.",
+    "examples": [
+      {"et": "Vali {õige} vastus.", "en": "Choose the [correct] answer.", "form": "gen sg"},
+      {"et": "Ma ei leidnud {õiget} sõna.", "en": "I couldn't find the [right] word.", "form": "part sg"},
+      {"et": "Kas me oleme {õiges} kohas?", "en": "Are we in the [right] place?", "form": "in sg"}
+    ]
+  },
+  {
+    "id": "tähtis", "lemma": "tähtis", "pos": "adj", "en": "important",
+    "forms": ["tähtis", "tähtsa", "tähtsat", "tähtsaid"],
+    "examples": [
+      {"et": "Mul on homme {tähtis} koosolek.", "en": "I have an [important] meeting tomorrow.", "form": "nom sg"},
+      {"et": "Mul on sulle midagi {tähtsat} öelda.", "en": "I have something [important] to tell you.", "form": "part sg"},
+      {"et": "Tervis on rahast {tähtsam}.", "en": "Health is [more important] than money.", "form": "comp nom sg"}
+    ]
+  },
+  {
+    "id": "huvitav", "lemma": "huvitav", "pos": "adj", "en": "interesting",
+    "forms": ["huvitav", "huvitava", "huvitavat", "huvitavaid"],
+    "examples": [
+      {"et": "See raamat on väga {huvitav}.", "en": "This book is very [interesting].", "form": "nom sg"},
+      {"et": "Ma lugesin täna {huvitava} artikli.", "en": "I read an [interesting] article today.", "form": "gen sg"},
+      {"et": "Tallinnas on palju {huvitavaid} kohti.", "en": "There are many [interesting] places in Tallinn.", "form": "part pl"}
+    ]
+  },
+  {
+    "id": "väsinud", "lemma": "väsinud", "pos": "adj", "en": "tired",
+    "forms": ["väsinud", "väsinud", "väsinut", "väsinuid"],
+    "note": "Nominative singular and plural look the same: ma olen väsinud, nad on väsinud.",
+    "examples": [
+      {"et": "Ma olen täna väga {väsinud}.", "en": "I'm very [tired] today.", "form": "nom sg"},
+      {"et": "Pärast matka olid kõik {väsinud}.", "en": "After the hike everyone was [tired].", "form": "nom pl"},
+      {"et": "Ma ärkasin täna {väsinuna}.", "en": "I woke up [tired] today.", "form": "es sg"}
+    ]
+  },
+  {
+    "id": "õnnelik", "lemma": "õnnelik", "pos": "adj", "en": "happy; lucky",
+    "forms": ["õnnelik", "õnneliku", "õnnelikku", "õnnelikke"],
+    "examples": [
+      {"et": "Ma olen sinuga väga {õnnelik}.", "en": "I'm very [happy] with you.", "form": "nom sg"},
+      {"et": "Nad on koos väga {õnnelikud}.", "en": "They are very [happy] together.", "form": "nom pl"},
+      {"et": "{Õnnelikku} uut aastat!", "en": "[Happy] New Year!", "form": "part sg"}
+    ]
+  },
+  {
+    "id": "kõik", "lemma": "kõik", "pos": "pron", "en": "all, everything, everyone",
+    "forms": ["kõik", "kõige", "kõike", "kõiki"],
+    "note": "kõige also makes superlatives: kõige suurem = the biggest.",
+    "examples": [
+      {"et": "{Kõik} on korras.", "en": "[Everything] is fine.", "form": "nom sg"},
+      {"et": "Aitäh {kõige} eest!", "en": "Thanks for [everything]!", "form": "gen sg"},
+      {"et": "Meie laps sööb {kõike}.", "en": "Our child eats [everything].", "form": "part sg"},
+      {"et": "Ma tunnen {kõiki} oma naabreid.", "en": "I know [all] my neighbours.", "form": "part pl"}
+    ]
+  },
+  {
+    "id": "iga", "lemma": "iga", "pos": "pron", "en": "every, each",
+    "forms": ["iga", "iga", "iga", ""],
+    "note": "Time expressions use the nominative: iga päev (every day), iga nädal.",
+    "examples": [
+      {"et": "Ma käin {iga} päev jooksmas.", "en": "I go running [every] day.", "form": "nom sg"},
+      {"et": "{Igal} hommikul joon ma kohvi.", "en": "[Every] morning I drink coffee.", "form": "ad sg"},
+      {"et": "{Igas} toas on suur aken.", "en": "There is a big window in [every] room.", "form": "in sg"}
+    ]
+  },
+  {
+    "id": "mõni", "lemma": "mõni", "pos": "pron", "en": "some, a few",
+    "forms": ["mõni", "mõne", "mõnda", "mõnesid"],
+    "examples": [
+      {"et": "Oota {mõni} minut!", "en": "Wait [a few] minutes!", "form": "nom sg"},
+      {"et": "{Mõned} inimesed ei söö liha.", "en": "[Some] people don't eat meat.", "form": "nom pl"},
+      {"et": "Ma tulen tagasi {mõne} päeva pärast.", "en": "I'll come back in [a few] days.", "form": "gen sg"}
+    ]
+  },
+  {
+    "id": "keegi", "lemma": "keegi", "pos": "pron", "en": "someone, anyone",
+    "forms": ["keegi", "kellegi", "kedagi", ""],
+    "note": "With a negative verb it means 'no one': Ma ei näinud kedagi = I didn't see anyone.",
+    "examples": [
+      {"et": "{Keegi} koputab uksele.", "en": "[Someone] is knocking at the door.", "form": "nom sg"},
+      {"et": "Ma ei näinud seal {kedagi}.", "en": "I didn't see [anyone] there.", "form": "part sg"},
+      {"et": "Kas sa rääkisid sellest {kellegagi}?", "en": "Did you talk about it [with anyone]?", "form": "kom sg"}
+    ]
+  },
+  {
+    "id": "midagi", "lemma": "midagi", "pos": "pron", "en": "something, anything",
+    "forms": ["miski", "millegi", "midagi", ""],
+    "note": "midagi is the partitive of miski; other cases add -gi/-ki: millestki, millelegi.",
+    "examples": [
+      {"et": "Kas sa tahad {midagi} juua?", "en": "Do you want [something] to drink?", "form": "part sg"},
+      {"et": "Ma ei saa {millestki} aru.", "en": "I don't understand [anything].", "form": "el sg"},
+      {"et": "Ma mõtlesin {millelegi} muule.", "en": "I was thinking about [something] else.", "form": "all sg"}
+    ]
+  },
+  {
+    "id": "üks", "lemma": "üks", "pos": "num", "en": "one",
+    "forms": ["üks", "ühe", "ühte", "üksi"],
+    "examples": [
+      {"et": "Mul on ainult {üks} vend.", "en": "I have only [one] brother.", "form": "nom sg"},
+      {"et": "Ma ostsin {ühe} pileti.", "en": "I bought [one] ticket.", "form": "gen sg"},
+      {"et": "Mul on vaja veel {ühte} asja.", "en": "I need [one] more thing.", "form": "part sg", "accept": ["üht"]}
+    ]
+  },
+  {
+    "id": "kaks", "lemma": "kaks", "pos": "num", "en": "two",
+    "forms": ["kaks", "kahe", "kahte", "kahtesid"],
+    "note": "After a numeral in the nominative the noun goes into the partitive singular: kaks last.",
+    "examples": [
+      {"et": "Mul on {kaks} last.", "en": "I have [two] children.", "form": "nom sg"},
+      {"et": "Ta on {kahe} lapse ema.", "en": "She is the mother of [two] children.", "form": "gen sg"},
+      {"et": "Ma räägin {kahte} keelt.", "en": "I speak [two] languages.", "form": "part sg", "accept": ["kaht"]}
+    ]
+  },
+  {
+    "id": "kolm", "lemma": "kolm", "pos": "num", "en": "three",
+    "forms": ["kolm", "kolme", "kolme", "kolmi"],
+    "examples": [
+      {"et": "Meil on {kolm} kassi.", "en": "We have [three] cats.", "form": "nom sg"},
+      {"et": "Tule kella {kolmeks} koju!", "en": "Come home [by three] o'clock!", "form": "tr sg"},
+      {"et": "Ma olen elanud {kolmes} riigis.", "en": "I have lived in [three] countries.", "form": "in sg"}
+    ]
+  },
+  {
+    "id": "esimene", "lemma": "esimene", "pos": "num", "en": "first",
+    "forms": ["esimene", "esimese", "esimest", "esimesi"],
+    "examples": [
+      {"et": "Täna on minu {esimene} tööpäev.", "en": "Today is my [first] day at work.", "form": "nom sg"},
+      {"et": "Me elame {esimesel} korrusel.", "en": "We live on the [first] floor.", "form": "ad sg"},
+      {"et": "Ta võitis võistlusel {esimese} koha.", "en": "She won [first] place in the competition.", "form": "gen sg"}
+    ]
+  },
+  {
+    "id": "viimane", "lemma": "viimane", "pos": "adj", "en": "last",
+    "forms": ["viimane", "viimase", "viimast", "viimaseid"],
+    "examples": [
+      {"et": "See on täna {viimane} buss.", "en": "This is the [last] bus today.", "form": "nom sg"},
+      {"et": "Ma jäin {viimasest} rongist maha.", "en": "I missed the [last] train.", "form": "el sg"},
+      {"et": "Kes sõi {viimase} koogitüki ära?", "en": "Who ate the [last] piece of cake?", "form": "gen sg"}
+    ]
+  },
+  {
+    "id": "teine", "lemma": "teine", "pos": "num", "en": "second; other, another",
+    "forms": ["teine", "teise", "teist", "teisi"],
+    "examples": [
+      {"et": "See on mu {teine} reis Eestisse.", "en": "This is my [second] trip to Estonia.", "form": "nom sg"},
+      {"et": "Ta elab nüüd {teises} linnas.", "en": "She lives in [another] city now.", "form": "in sg"},
+      {"et": "Mõtle ka {teistele}!", "en": "Think of [others] too!", "form": "all pl"}
+    ]
+  },
+  {
+    "id": "sama", "lemma": "sama", "pos": "pron", "en": "same",
+    "forms": ["sama", "sama", "sama", "samu"],
+    "examples": [
+      {"et": "Meil on {sama} nimi.", "en": "We have the [same] name.", "form": "nom sg"},
+      {"et": "Me elame {samas} majas.", "en": "We live in the [same] building.", "form": "in sg"},
+      {"et": "Ta kannab alati {samu} riideid.", "en": "He always wears the [same] clothes.", "form": "part pl"}
+    ]
+  },
+  {
+    "id": "väga", "lemma": "väga", "pos": "adv", "en": "very; very much",
+    "forms": [],
+    "examples": [
+      {"et": "Aitäh, see oli {väga} maitsev!", "en": "Thanks, that was [very] tasty!", "form": ""},
+      {"et": "Mulle meeldib see laul {väga}.", "en": "I like this song [a lot].", "form": ""},
+      {"et": "Ilm ei ole täna {väga} hea.", "en": "The weather isn't [very] good today.", "form": ""}
+    ]
+  },
+  {
+    "id": "natuke", "lemma": "natuke", "pos": "adv", "en": "a little, a bit",
+    "forms": [],
+    "examples": [
+      {"et": "Ma räägin {natuke} eesti keelt.", "en": "I speak [a little] Estonian.", "form": ""},
+      {"et": "Oota {natuke}, ma tulen kohe!", "en": "Wait [a bit], I'm coming right away!", "form": ""},
+      {"et": "Ma olen {natuke} väsinud.", "en": "I'm [a bit] tired.", "form": ""}
+    ]
+  },
+  {
+    "id": "liiga", "lemma": "liiga", "pos": "adv", "en": "too (much)",
+    "forms": [],
+    "examples": [
+      {"et": "See jope on {liiga} kallis.", "en": "This jacket is [too] expensive.", "form": ""},
+      {"et": "Sa räägid {liiga} kiiresti.", "en": "You speak [too] fast.", "form": ""},
+      {"et": "Ma sõin eile {liiga} palju.", "en": "I ate [too] much yesterday.", "form": ""}
+    ]
+  },
+  {
+    "id": "ainult", "lemma": "ainult", "pos": "adv", "en": "only",
+    "forms": [],
+    "examples": [
+      {"et": "Mul on {ainult} kaks eurot.", "en": "I [only] have two euros.", "form": ""},
+      {"et": "Ma joon {ainult} vett.", "en": "I drink [only] water.", "form": ""},
+      {"et": "Pood on avatud {ainult} laupäeviti.", "en": "The shop is open [only] on Saturdays.", "form": ""}
+    ]
+  },
+  {
+    "id": "kindlasti", "lemma": "kindlasti", "pos": "adv", "en": "definitely, certainly, surely",
+    "forms": [],
+    "examples": [
+      {"et": "Ma tulen {kindlasti}!", "en": "I'll [definitely] come!", "form": ""},
+      {"et": "Ta on praegu {kindlasti} kodus.", "en": "He's [surely] at home right now.", "form": ""},
+      {"et": "Proovi seda kooki {kindlasti}!", "en": "[Be sure] to try this cake!", "form": ""}
+    ]
+  },
+  {
+    "id": "võib-olla", "lemma": "võib-olla", "pos": "adv", "en": "maybe, perhaps",
+    "forms": [],
+    "examples": [
+      {"et": "{Võib-olla} sajab homme vihma.", "en": "[Maybe] it will rain tomorrow.", "form": ""},
+      {"et": "Ta on {võib-olla} haige.", "en": "She is [perhaps] ill.", "form": ""},
+      {"et": "Ma tulen {võib-olla} natuke hiljem.", "en": "I'll [maybe] come a bit later.", "form": ""}
+    ]
+  },
+  {
+    "id": "sest", "lemma": "sest", "pos": "conj", "en": "because",
+    "forms": [],
+    "examples": [
+      {"et": "Ma jään koju, {sest} ma olen haige.", "en": "I'm staying home [because] I'm ill.", "form": ""},
+      {"et": "Võta vihmavari, {sest} väljas sajab.", "en": "Take an umbrella, [because] it's raining outside.", "form": ""},
+      {"et": "Ta ei tulnud, {sest} tal polnud aega.", "en": "She didn't come [because] she had no time.", "form": ""}
+    ]
+  },
+  {
+    "id": "või", "lemma": "või", "pos": "conj", "en": "or",
+    "forms": [],
+    "note": "Don't mix it up with the noun või 'butter'.",
+    "examples": [
+      {"et": "Kas sa tahad teed {või} kohvi?", "en": "Do you want tea [or] coffee?", "form": ""},
+      {"et": "Ma helistan sulle täna {või} homme.", "en": "I'll call you today [or] tomorrow.", "form": ""},
+      {"et": "Kas sa tuled {või} mitte?", "en": "Are you coming [or] not?", "form": ""}
+    ]
+  },
+  {
+    "id": "kuni", "lemma": "kuni", "pos": "conj", "en": "until; while; up to",
+    "forms": [],
+    "examples": [
+      {"et": "Oota siin, {kuni} ma tagasi tulen.", "en": "Wait here [until] I come back.", "form": ""},
+      {"et": "Pood on lahti {kuni} kella kümneni.", "en": "The shop is open [until] ten o'clock.", "form": ""},
+      {"et": "Söö, {kuni} toit on veel soe.", "en": "Eat [while] the food is still warm.", "form": ""}
+    ]
+  },
+  {
+    "id": "enne", "lemma": "enne", "pos": "prep", "en": "before",
+    "forms": [],
+    "note": "As a preposition it takes the partitive: enne tööd, enne sööki.",
+    "examples": [
+      {"et": "Pese käed {enne} sööki.", "en": "Wash your hands [before] the meal.", "form": ""},
+      {"et": "Ma olen kodus {enne} kella viit.", "en": "I'll be home [before] five o'clock.", "form": ""},
+      {"et": "Ma pole kunagi {enne} Eestis käinud.", "en": "I've never been to Estonia [before].", "form": ""}
+    ]
+  },
+  {
+    "id": "pärast", "lemma": "pärast", "pos": "prep", "en": "after; in (time); later",
+    "forms": [],
+    "note": "Before a noun it takes the partitive (pärast tööd = after work); after a genitive it means 'in': tunni aja pärast = in an hour.",
+    "examples": [
+      {"et": "Lähme {pärast} tööd kinno.", "en": "Let's go to the cinema [after] work.", "form": ""},
+      {"et": "Ma tulen tunni aja {pärast}.", "en": "I'll come [in] an hour.", "form": ""},
+      {"et": "Räägime sellest {pärast}.", "en": "Let's talk about it [afterwards].", "form": ""}
+    ]
+  },
+  {
+    "id": "koos", "lemma": "koos", "pos": "adv", "en": "together; (together) with",
+    "forms": [],
+    "note": "'With someone' is koos + comitative: koos sõbraga.",
+    "examples": [
+      {"et": "Me elame {koos}.", "en": "We live [together].", "form": ""},
+      {"et": "Ma käisin {koos} sõbraga kinos.", "en": "I went to the cinema [together with] a friend.", "form": ""},
+      {"et": "Lähme {koos} poodi!", "en": "Let's go to the shop [together]!", "form": ""}
+    ]
+  },
+  {
+    "id": "ilma", "lemma": "ilma", "pos": "prep", "en": "without",
+    "forms": [],
+    "note": "Takes the abessive (-ta): ilma suhkruta. Don't confuse with ilm 'weather'.",
+    "examples": [
+      {"et": "Ma joon kohvi {ilma} suhkruta.", "en": "I drink coffee [without] sugar.", "form": ""},
+      {"et": "Ära mine välja {ilma} mütsita!", "en": "Don't go out [without] a hat!", "form": ""},
+      {"et": "Ma ei saa {ilma} sinuta elada.", "en": "I can't live [without] you.", "form": ""}
+    ]
+  },
+  {
+    "id": "juures", "lemma": "juures", "pos": "post", "en": "at, by, near; at someone's place",
+    "forms": [],
+    "note": "Takes the genitive: sõbra juures = at a friend's place. Direction 'to' is juurde, 'from' is juurest.",
+    "examples": [
+      {"et": "Ma olen praegu sõbra {juures}.", "en": "I'm [at] a friend's place right now.", "form": ""},
+      {"et": "Kohtume jaama {juures}.", "en": "Let's meet [by] the station.", "form": ""},
+      {"et": "Ta elab veel vanemate {juures}.", "en": "He still lives [with] his parents.", "form": ""}
+    ]
+  },
+  {
+    "id": "peal", "lemma": "peal", "pos": "post", "en": "on (top of)",
+    "forms": [],
+    "note": "Takes the genitive: laua peal. 'Onto' is peale, 'off' is pealt.",
+    "examples": [
+      {"et": "Raamat on laua {peal}.", "en": "The book is [on] the table.", "form": ""},
+      {"et": "Kass magab diivani {peal}.", "en": "The cat is sleeping [on] the sofa.", "form": ""},
+      {"et": "Võtmed on külmkapi {peal}.", "en": "The keys are [on top of] the fridge.", "form": ""}
+    ]
+  },
+  {
+    "id": "all", "lemma": "all", "pos": "post", "en": "under, below",
+    "forms": [],
+    "note": "Takes the genitive: laua all. 'To under' is alla, 'from under' is alt.",
+    "examples": [
+      {"et": "Kass on laua {all}.", "en": "The cat is [under] the table.", "form": ""},
+      {"et": "Sinu kingad on voodi {all}.", "en": "Your shoes are [under] the bed.", "form": ""},
+      {"et": "Istume puu {all} varjus.", "en": "Let's sit in the shade [under] the tree.", "form": ""}
+    ]
+  },
+  {
+    "id": "ees", "lemma": "ees", "pos": "post", "en": "in front of",
+    "forms": [],
+    "note": "Takes the genitive: maja ees. Movement is ette, from there eest.",
+    "examples": [
+      {"et": "Auto on maja {ees}.", "en": "The car is [in front of] the house.", "form": ""},
+      {"et": "Ma ootan sind kino {ees}.", "en": "I'll wait for you [in front of] the cinema.", "form": ""},
+      {"et": "Ta istub terve päeva arvuti {ees}.", "en": "He sits [in front of] the computer all day.", "form": ""}
+    ]
+  },
+  {
+    "id": "taga", "lemma": "taga", "pos": "post", "en": "behind",
+    "forms": [],
+    "note": "Takes the genitive: maja taga. Movement is taha, from there tagant.",
+    "examples": [
+      {"et": "Aed on maja {taga}.", "en": "The garden is [behind] the house.", "form": ""},
+      {"et": "Keegi seisab ukse {taga}.", "en": "Someone is standing [behind] the door.", "form": ""},
+      {"et": "Kes on selle idee {taga}?", "en": "Who is [behind] this idea?", "form": ""}
+    ]
+  },
+  {
+    "id": "vastu", "lemma": "vastu", "pos": "post", "en": "against; towards",
+    "forms": [],
+    "note": "Takes the genitive: seina vastu. 'Opposite' is vastas.",
+    "examples": [
+      {"et": "Ma olen selle plaani {vastu}.", "en": "I'm [against] this plan.", "form": ""},
+      {"et": "Ta toetas jalgratta seina {vastu}.", "en": "He leaned the bike [against] the wall.", "form": ""},
+      {"et": "Eesti mängib täna Soome {vastu}.", "en": "Estonia is playing [against] Finland today.", "form": ""}
+    ]
+  },
+  {
+    "id": "läbi", "lemma": "läbi", "pos": "prep", "en": "through; over, finished",
+    "forms": [],
+    "note": "Works before or after a genitive (läbi metsa / metsa läbi); 'on läbi' means 'is over'.",
+    "examples": [
+      {"et": "Me jalutasime {läbi} pargi.", "en": "We walked [through] the park.", "form": ""},
+      {"et": "Film on juba {läbi}.", "en": "The film is already [over].", "form": ""},
+      {"et": "Ma lugesin raamatu ühe päevaga {läbi}.", "en": "I read the book [through] in one day.", "form": ""}
+    ]
+  }
+]

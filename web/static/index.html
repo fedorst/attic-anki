@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Sõnad — learn Estonian in context</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23126e82'/><text x='16' y='23' font-size='20' font-family='system-ui' font-weight='700' fill='white' text-anchor='middle'>õ</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/learn"><span class="brand-mark">õ</span> Sõnad</a>
+    <nav class="tabs" aria-label="Main">
+      <a href="#/learn" data-route="learn">Learn</a>
+      <a href="#/words" data-route="words">Words</a>
+      <a href="#/stats" data-route="stats">Progress</a>
+      <a href="#/settings" data-route="settings">Settings</a>
+    </nav>
+    <div class="today" id="today" aria-live="polite"></div>
+  </header>
+  <main id="view"></main>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
