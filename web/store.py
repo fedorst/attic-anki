@@ -168,9 +168,9 @@ class Store:
         s = self.settings()
         return s["new_per_day"] + int(s.get(f"extra_new_{today.date().isoformat()}", 0))
 
-    def learn_more(self, tz_minutes: int, amount: int = 10) -> None:
+    def learn_more(self, tz_minutes: int, amount: int = 10, at: datetime | None = None) -> None:
         """Raise today's new-word limit (the 'keep going' button)."""
-        key = f"extra_new_{day_start(now_utc(), tz_minutes).date().isoformat()}"
+        key = f"extra_new_{day_start(at or now_utc(), tz_minutes).date().isoformat()}"
         with self.lock:
             current = self.settings().get(key, 0)
             self.db.execute("INSERT OR REPLACE INTO settings VALUES (?, ?)", (key, json.dumps(current + amount)))

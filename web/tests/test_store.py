@@ -53,7 +53,7 @@ def test_new_words_come_in_deck_order_and_respect_daily_limit(store):
     assert res["card"] is None
     assert res["counts"]["new_left"] == 0
 
-    store.learn_more(0, amount=2)
+    store.learn_more(0, amount=2, at=at)
     assert store.next_card(0, at=at)["counts"]["new_left"] == 2
 
 
