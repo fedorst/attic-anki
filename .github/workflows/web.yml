@@ -1,0 +1,72 @@
+name: web
+
+on:
+  push:
+    branches: [main]
+    paths: ["web/**", ".github/workflows/web.yml"]
+  pull_request:
+    paths: ["web/**", ".github/workflows/web.yml"]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt pytest
+
+      - name: Validate deck
+        run: python tools/validate_deck.py
+
+      - name: Run tests
+        run: python -m pytest -q tests
+
+      - name: Build static site
+        run: python tools/build_static.py dist/index.html
+
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: web/dist/
+          retention-days: 7
+
+  deploy:
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    env:
+      DEPLOY_SSH_KEY: ${{ secrets.SONAD_DEPLOY_SSH_KEY }}
+    steps:
+      - name: Skip until the deploy key is configured
+        if: env.DEPLOY_SSH_KEY == ''
+        run: echo "::notice::SONAD_DEPLOY_SSH_KEY is not set; skipping deploy (see web/deploy/README.md)"
+
+      - uses: actions/download-artifact@v4
+        if: env.DEPLOY_SSH_KEY != ''
+        with:
+          name: site
+          path: dist
+
+      - name: Set up SSH
+        if: env.DEPLOY_SSH_KEY != ''
+        run: |
+          mkdir -p ~/.ssh
+          echo "$DEPLOY_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          echo "164.92.234.72 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFJpx92qK9ugyfMRekUOmUYNTQaPCM0GRzDK9qHfCfBy" >> ~/.ssh/known_hosts
+
+      - name: Deploy to sonad.fedor.ee
+        if: env.DEPLOY_SSH_KEY != ''
+        run: |
+          rsync -rlcz --delete \
+            -e "ssh -i ~/.ssh/deploy_key" \
+            dist/ sonad-deploy@164.92.234.72:/
